@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Branding Kelas — X-2025</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Poppins:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0b1220;
+        --surface: #0e1626;
+        --text: #e5e7eb;
+        --muted: #9ca3af;
+        --primary: #4f46e5;
+        --accent: #22d3ee;
+        --ring: #22d3ee33;
+        --card: #111827;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+          sans-serif;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      .container {
+        max-width: 1100px;
+        margin: auto;
+        padding: 24px;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        backdrop-filter: saturate(180%) blur(12px);
+        background: #0b1220cc;
+        border-bottom: 1px solid #ffffff10;
+        z-index: 10;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .logo {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        background: conic-gradient(from 210deg, var(--primary), var(--accent));
+        display: grid;
+        place-items: center;
+        font-weight: 800;
+      }
+      .nav a {
+        opacity: 0.9;
+      }
+      .nav .links {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 16px;
+        border: 1px solid #ffffff20;
+        border-radius: 12px;
+        background: linear-gradient(180deg, #ffffff08, #00000000);
+        cursor: pointer;
+      }
+      .btn.primary {
+        border-color: transparent;
+        background: linear-gradient(180deg, var(--primary), #4338ca);
+        color: white;
+        box-shadow: 0 6px 24px #4f46e566;
+      }
+      .hero {
+        padding: 72px 0 48px;
+        display: grid;
+        gap: 18px;
+        align-items: center;
+      }
+      .eyebrow {
+        font-size: 14px;
+        letter-spacing: 0.08em;
+        color: var(--accent);
+        text-transform: uppercase;
+      }
+      h1 {
+        font-family: Poppins, Inter, system-ui, sans-serif;
+        font-size: 48px;
+        line-height: 1.1;
+        margin: 0;
+      }
+      p.lead {
+        font-size: 18px;
+        color: var(--muted);
+        max-width: 68ch;
+      }
+      .hero-cta {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 8px;
+      }
+      section {
+        padding: 48px 0;
+        border-top: 1px solid #ffffff10;
+      }
+      h2 {
+        font-family: Poppins, Inter, sans-serif;
+        font-size: 28px;
+        margin: 0 0 16px;
+      }
+      .grid {
+        display: grid;
+        gap: 16px;
+      }
+      .cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      @media (max-width: 900px) {
+        .cols-3 {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 600px) {
+        .cols-3,
+        .cols-2 {
+          grid-template-columns: 1fr;
+        }
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid #ffffff12;
+        border-radius: 16px;
+        padding: 16px;
+      }
+      .pill {
+        display: inline-block;
+        padding: 6px 10px;
+        border: 1px solid #ffffff22;
+        border-radius: 999px;
+        font-size: 12px;
+        color: var(--muted);
+      }
+      .kpis {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .kpi {
+        background: var(--card);
+        border: 1px solid #ffffff12;
+        border-radius: 14px;
+        padding: 12px 14px;
+      }
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 8px;
+      }
+      @media (max-width: 900px) {
+        .gallery {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      @media (max-width: 600px) {
+        .gallery {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      .gallery img {
+        border-radius: 12px;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        border: 1px solid #ffffff12;
+      }
+      footer {
+        padding: 32px 0;
+        color: var(--muted);
+      }
+      /* Dark mode toggle */
+      .toggle {
+        width: 46px;
+        height: 28px;
+        border-radius: 999px;
+        background: #ffffff1a;
+        position: relative;
+        cursor: pointer;
+        border: 1px solid #ffffff22;
+      }
+      .dot {
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background: white;
+        transition: 0.2s;
+      }
+      .toggle.active .dot {
+        left: 21px;
+        background: var(--accent);
+      }
+      /* Focus rings */
+      a:focus,
+      .btn:focus,
+      .toggle:focus {
+        outline: 2px solid var(--ring);
+        outline-offset: 3px;
+        border-radius: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container nav" role="navigation" aria-label="Utama">
+        <div class="brand">
+          <div class="logo" aria-hidden="true">X</div>
+          <strong>X-2025</strong>
+        </div>
+        <div class="links">
+          <a href="#about">Tentang</a>
+          <a href="#values">Nilai</a>
+          <a href="#projects">Proyek</a>
+          <a href="#highlights">Highlight</a>
+          <a href="#gallery">Galeri</a>
+          <div
+            class="toggle"
+            id="themeToggle"
+            role="switch"
+            aria-checked="false"
+            tabindex="0"
+            title="Toggle tema"
+          >
+            <div class="dot"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero container">
+        <span class="eyebrow">KELAS SISTEM INFORMASI — 2025</span>
+        <h1>Belajar, Berkarya, Berdampak.</h1>
+        <p class="lead">
+          Kami adalah kelas 01SIFE001. Tim yang suka membangun proyek nyata dari AI,
+          berbagi ilmu, dan tumbuh bareng. Ikuti perjalanan kami di kompetisi,
+          riset, dan pengabdian.
+        </p>
+        <div class="hero-cta">
+          <a class="btn primary" href="#projects">Lihat Proyek</a>
+          <a class="btn" href="#contact">Hubungi Kami</a>
+        </div>
+        <div class="kpis" aria-label="Ringkasan cepat">
+          <div class="kpi"><strong>32</strong> siswa</div>
+          <div class="kpi"><strong>12</strong> proyek</div>
+          <div class="kpi"><strong>5</strong> penghargaan</div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="container grid cols-2">
+          <div>
+            <h2>Tentang Kelas</h2>
+            <p>
+              Kami percaya pembelajaran terbaik lahir dari kolaborasi,
+              eksperimen, dan keberanian untuk berbagi. Fokus kami: software
+              engineering, data, dan impact sosial.
+            </p>
+            <div class="pill">#KelasX2025</div>
+            <div class="pill">#BelajarBerkarya</div>
+          </div>
+          <div class="card">
+            <strong>Info Singkat</strong>
+            <ul>
+              <li>Wali Kelas: Ibu A. Pratama</li>
+              <li>Jurusan: Informatika</li>
+              <li>Kampus: ABC University</li>
+              <li>Email: kelasx2025@example.com</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="values">
+        <div class="container">
+          <h2>Nilai & Budaya</h2>
+          <div class="grid cols-3">
+            <div class="card">
+              <strong>Kolaboratif</strong>
+              <p>Kami tumbuh bareng lewat pairing dan review terbuka.</p>
+            </div>
+            <div class="card">
+              <strong>Build-First</strong>
+              <p>Belajar dengan membangun proyek nyata & demo publik.</p>
+            </div>
+            <div class="card">
+              <strong>Berbagi</strong>
+              <p>Menulis ringkasan materi, open-source, dan presentasi.</p>
+            </div>
+            <div class="card">
+              <strong>Integritas</strong>
+              <p>Jujur, disiplin, dan menghargai proses.</p>
+            </div>
+            <div class="card">
+              <strong>Growth</strong>
+              <p>Iterasi cepat, refleksi rutin, dan umpan balik.</p>
+            </div>
+            <div class="card">
+              <strong>Fun</strong>
+              <p>Kegiatan santai supaya energi tetap terjaga.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="highlights">
+        <div class="container">
+          <h2>Highlight</h2>
+          <div class="grid cols-3">
+            <a class="card" href="#" target="_blank" rel="noopener">
+              <strong>Juara 2 HackFest 2025</strong>
+              <p class="muted">Kategori EduTech, Bandung.</p>
+            </a>
+            <a class="card" href="#" target="_blank" rel="noopener">
+              <strong>Publikasi Mini-Research</strong>
+              <p class="muted">Studi UX pada aplikasi belajar.</p>
+            </a>
+            <a class="card" href="#" target="_blank" rel="noopener">
+              <strong>Community Service</strong>
+              <p class="muted">Workshop coding untuk SMP.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="container">
+          <h2>Proyek Unggulan</h2>
+          <div class="grid cols-3">
+            <a class="card" href="#" target="_blank" rel="noopener">
+              <img src="project-1.jpg" alt="Thumbnail Proyek 1" />
+              <strong>ClassHub</strong>
+              <p>Portal kegiatan kelas — React + Firebase.</p>
+            </a>
+            <a class="card" href="#" target="_blank" rel="noopener">
+              <img src="project-2.jpg" alt="Thumbnail Proyek 2" />
+              <strong>EcoTrack</strong>
+              <p>Pelacak sampah kampus — Node + Mongo.</p>
+            </a>
+            <a class="card" href="#" target="_blank" rel="noopener">
+              <img src="project-3.jpg" alt="Thumbnail Proyek 3" />
+              <strong>QuizBee</strong>
+              <p>Quiz interaktif — Vanilla JS.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery">
+        <div class="container">
+          <h2>Galeri</h2>
+          <div class="gallery">
+            <img src="gallery-1.jpg" alt="Kegiatan 1" />
+            <img src="gallery-2.jpg" alt="Kegiatan 2" />
+            <img src="gallery-3.jpg" alt="Kegiatan 3" />
+            <img src="gallery-4.jpg" alt="Kegiatan 4" />
+            <img src="gallery-5.jpg" alt="Kegiatan 5" />
+            <img src="gallery-6.jpg" alt="Kegiatan 6" />
+            <img src="gallery-7.jpg" alt="Kegiatan 7" />
+            <img src="gallery-8.jpg" alt="Kegiatan 8" />
+            <img src="gallery-9.jpg" alt="Kegiatan 9" />
+            <img src="gallery-10.jpg" alt="Kegiatan 10" />
+            <img src="gallery-11.jpg" alt="Kegiatan 11" />
+            <img src="gallery-12.jpg" alt="Kegiatan 12" />
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="container grid cols-2">
+          <div>
+            <h2>Kontak & Sosial</h2>
+            <p>
+              Ingin kolaborasi, undang kami, atau sekadar sapa? Yuk terhubung.
+            </p>
+            <p>
+              Email:
+              <a href="mailto:kelasx2025@example.com">kelasx2025@example.com</a>
+            </p>
+            <p>
+              Instagram:
+              <a
+                href="https://instagram.com/kelasx2025"
+                target="_blank"
+                rel="noopener"
+                >@kelasx2025</a
+              >
+            </p>
+            <p>
+              GitHub:
+              <a
+                href="https://github.com/kelasx2025"
+                target="_blank"
+                rel="noopener"
+                >github.com/kelasx2025</a
+              >
+            </p>
+          </div>
+          <div class="card">
+            <strong>Media Kit</strong>
+            <p>Unduh logo, warna, dan panduan pemakaian.</p>
+            <a class="btn" href="#">Download ZIP</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        © 2025 Kelas 01SIFE001 • Made with ♥ dari GPT xixixi
+      </div>
+    </footer>
+
+    <script>
+      // Dark mode toggle (swap theme via data attribute for extensibility)
+      const toggle = document.getElementById("themeToggle");
+      const root = document.documentElement;
+      function setTheme(mode) {
+        // Example: you could implement alternate tokens here
+        localStorage.setItem("brand-theme", mode);
+      }
+      function init() {
+        const saved = localStorage.getItem("brand-theme");
+        if (saved === "dark") {
+          toggle.classList.add("active");
+        }
+      }
+      toggle.addEventListener("click", () => {
+        toggle.classList.toggle("active");
+        const active = toggle.classList.contains("active");
+        setTheme(active ? "dark" : "light");
+        toggle.setAttribute("aria-checked", active ? "true" : "false");
+      });
+      toggle.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          toggle.click();
+        }
+      });
+      init();
+    </script>
+  </body>
+</html>
