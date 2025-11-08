@@ -47,6 +47,7 @@
           <a href="#projects">Proyek</a>
           <a href="#highlights">Highlight</a>
           <a href="#gallery">Galeri</a>
+          <a href="#kaldik">Kalender</a>
           <a href="#contact">Kontak</a>
 
           <button
@@ -254,6 +255,24 @@
         </div>
       </section>
 
+      <section id="kaldik">
+        <div class="container">
+          <h2>Kalender Pendidikan</h2>
+          <p class="lead">
+            Jadwal akademik, ujian, dan kegiatan penting kelas 01SIFE001.
+          </p>
+          <div class="calendar">
+            <iframe
+              id="calendarFrame"
+              src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FJakarta&showPrint=0&title=Kalendar%20Pendidikan&showDate=0&showTabs=0&showCalendars=0&src=MDFzaWZlMDAxQGdtYWlsLmNvbQ&src=ZW4tZ2IuaW5kb25lc2lhbiNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23039be5&color=%230b8043"
+              frameborder="0"
+              scrolling="no"
+              allowtransparency="true"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
       <section id="contact">
         <div class="container">
           <h2>Kontak & Sosial</h2>
@@ -414,7 +433,29 @@
         }
       });
 
-      
+      // const calendarFrame = document.querySelector(
+      //   'iframe[src*="calendar.google.com"]'
+      // );
+
+      // function updateCalendarTheme(mode) {
+      //   if (!calendarFrame) return;
+      //   const baseURL =
+      //     "https://calendar.google.com/calendar/embed?src=vigar.ext%40gmail.com&ctz=Asia%2FJakarta";
+      //   calendarFrame.src =
+      //     baseURL + (mode === "dark" ? "&mode=dark" : "&mode=light");
+      // }
+
+      // // Jalankan saat tema berubah
+      // const savedTheme = localStorage.getItem("brand-theme") || "dark";
+      // updateCalendarTheme(savedTheme);
+
+      // // Tambahkan ke event toggle kamu
+      // document.getElementById("themeToggle").addEventListener("click", () => {
+      //   const isDark =
+      //     document.documentElement.getAttribute("data-theme") === "dark";
+      //   updateCalendarTheme(isDark ? "dark" : "light");
+      // });
+
       // --- Footer Dynamic Year ---
       const yearEl = document.getElementById("footerYear");
       const currentYear = new Date().getFullYear();

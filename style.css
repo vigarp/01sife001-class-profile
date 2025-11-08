@@ -531,3 +531,28 @@ a:focus,
 .carousel-dots button:focus {
   outline: 2px solid var(--ring);
 }
+
+/* Calendar responsive */
+.calendar {
+  border-radius: 16px;
+  overflow: hidden;              /* biar sudutnya rounded */
+  border: 1px solid #ffffff22;   /* selaras dengan style card */
+  background: var(--surface);
+}
+
+/* Pakai aspect-ratio agar tinggi ikut lebar */
+.calendar iframe {
+  width: 100%;
+  aspect-ratio: 16 / 10;   /* rasio nyaman untuk kalender */
+  height: auto;            /* biar mengikuti aspect-ratio */
+  display: block;
+  border: 0;
+}
+
+/* Sesuaikan tinggi di berbagai layar */
+@media (max-width: 900px) {
+  .calendar iframe { aspect-ratio: 16 / 12; }
+}
+@media (max-width: 600px) {
+  .calendar iframe { aspect-ratio: 4 / 5; } /* lebih tinggi di HP */
+}
