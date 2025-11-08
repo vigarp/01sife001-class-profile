@@ -1,288 +1,97 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" data-theme="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Branding Kelas — X-2025</title>
+    <title>Kelas 01SIFE001</title>
+
+    <meta
+      name="description"
+      content="Kelas 01SIFE001 — Belajar, berkarya, berdampak. Proyek, riset, dan komunitas X-2025."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Poppins:wght@600;800&display=swap"
       rel="stylesheet"
     />
-    <style>
-      :root {
-        --bg: #0b1220;
-        --surface: #0e1626;
-        --text: #e5e7eb;
-        --muted: #9ca3af;
-        --primary: #4f46e5;
-        --accent: #22d3ee;
-        --ring: #22d3ee33;
-        --card: #111827;
-      }
-      * {
-        box-sizing: border-box;
-      }
-      html,
-      body {
-        margin: 0;
-        background: var(--bg);
-        color: var(--text);
-        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial,
-          sans-serif;
-      }
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-      img {
-        max-width: 100%;
-        display: block;
-      }
-      .container {
-        max-width: 1100px;
-        margin: auto;
-        padding: 24px;
-      }
-      header {
-        position: sticky;
-        top: 0;
-        backdrop-filter: saturate(180%) blur(12px);
-        background: #0b1220cc;
-        border-bottom: 1px solid #ffffff10;
-        z-index: 10;
-      }
-      .nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-      }
-      .brand {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-      }
-      .logo {
-        width: 36px;
-        height: 36px;
-        border-radius: 10px;
-        background: conic-gradient(from 210deg, var(--primary), var(--accent));
-        display: grid;
-        place-items: center;
-        font-weight: 800;
-      }
-      .nav a {
-        opacity: 0.9;
-      }
-      .nav .links {
-        display: flex;
-        gap: 18px;
-        align-items: center;
-      }
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        padding: 10px 16px;
-        border: 1px solid #ffffff20;
-        border-radius: 12px;
-        background: linear-gradient(180deg, #ffffff08, #00000000);
-        cursor: pointer;
-      }
-      .btn.primary {
-        border-color: transparent;
-        background: linear-gradient(180deg, var(--primary), #4338ca);
-        color: white;
-        box-shadow: 0 6px 24px #4f46e566;
-      }
-      .hero {
-        padding: 72px 0 48px;
-        display: grid;
-        gap: 18px;
-        align-items: center;
-      }
-      .eyebrow {
-        font-size: 14px;
-        letter-spacing: 0.08em;
-        color: var(--accent);
-        text-transform: uppercase;
-      }
-      h1 {
-        font-family: Poppins, Inter, system-ui, sans-serif;
-        font-size: 48px;
-        line-height: 1.1;
-        margin: 0;
-      }
-      p.lead {
-        font-size: 18px;
-        color: var(--muted);
-        max-width: 68ch;
-      }
-      .hero-cta {
-        display: flex;
-        gap: 12px;
-        flex-wrap: wrap;
-        margin-top: 8px;
-      }
-      section {
-        padding: 48px 0;
-        border-top: 1px solid #ffffff10;
-      }
-      h2 {
-        font-family: Poppins, Inter, sans-serif;
-        font-size: 28px;
-        margin: 0 0 16px;
-      }
-      .grid {
-        display: grid;
-        gap: 16px;
-      }
-      .cols-3 {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-      .cols-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-      @media (max-width: 900px) {
-        .cols-3 {
-          grid-template-columns: 1fr 1fr;
-        }
-      }
-      @media (max-width: 600px) {
-        .cols-3,
-        .cols-2 {
-          grid-template-columns: 1fr;
-        }
-      }
-      .card {
-        background: var(--card);
-        border: 1px solid #ffffff12;
-        border-radius: 16px;
-        padding: 16px;
-      }
-      .pill {
-        display: inline-block;
-        padding: 6px 10px;
-        border: 1px solid #ffffff22;
-        border-radius: 999px;
-        font-size: 12px;
-        color: var(--muted);
-      }
-      .kpis {
-        display: flex;
-        gap: 16px;
-        flex-wrap: wrap;
-      }
-      .kpi {
-        background: var(--card);
-        border: 1px solid #ffffff12;
-        border-radius: 14px;
-        padding: 12px 14px;
-      }
-      .gallery {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        gap: 8px;
-      }
-      @media (max-width: 900px) {
-        .gallery {
-          grid-template-columns: repeat(3, 1fr);
-        }
-      }
-      @media (max-width: 600px) {
-        .gallery {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
-      .gallery img {
-        border-radius: 12px;
-        aspect-ratio: 1/1;
-        object-fit: cover;
-        border: 1px solid #ffffff12;
-      }
-      footer {
-        padding: 32px 0;
-        color: var(--muted);
-      }
-      /* Dark mode toggle */
-      .toggle {
-        width: 46px;
-        height: 28px;
-        border-radius: 999px;
-        background: #ffffff1a;
-        position: relative;
-        cursor: pointer;
-        border: 1px solid #ffffff22;
-      }
-      .dot {
-        position: absolute;
-        top: 3px;
-        left: 3px;
-        width: 22px;
-        height: 22px;
-        border-radius: 50%;
-        background: white;
-        transition: 0.2s;
-      }
-      .toggle.active .dot {
-        left: 21px;
-        background: var(--accent);
-      }
-      /* Focus rings */
-      a:focus,
-      .btn:focus,
-      .toggle:focus {
-        outline: 2px solid var(--ring);
-        outline-offset: 3px;
-        border-radius: 12px;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main">Lewati ke konten utama</a>
+
     <header>
-      <div class="container nav" role="navigation" aria-label="Utama">
+      <div class="container nav">
         <div class="brand">
-          <div class="logo" aria-hidden="true">X</div>
-          <strong>X-2025</strong>
+          <button
+            class="hamburger"
+            id="menuToggle"
+            aria-expanded="false"
+            aria-controls="mainNav"
+            aria-label="Buka menu"
+          >
+            <span></span><span></span><span></span>
+          </button>
+          <div class="logo" aria-hidden="true">
+            <img src="./class-logo.png" alt="" />
+          </div>
+          <strong class="brand-text">SIFE001 2025</strong>
+          <span class="brand-sub" aria-label="Universitas"
+            >• Pamulang University</span
+          >
         </div>
-        <div class="links">
+
+        <nav id="mainNav" aria-label="Utama" class="links">
           <a href="#about">Tentang</a>
           <a href="#values">Nilai</a>
           <a href="#projects">Proyek</a>
           <a href="#highlights">Highlight</a>
           <a href="#gallery">Galeri</a>
-          <div
+          <a href="#contact">Kontak</a>
+
+          <button
             class="toggle"
             id="themeToggle"
+            type="button"
             role="switch"
             aria-checked="false"
-            tabindex="0"
             title="Toggle tema"
           >
-            <div class="dot"></div>
-          </div>
-        </div>
+            <span class="dot" aria-hidden="true"></span>
+            <!-- <span class="visually-hidden">Ubah tema</span> -->
+          </button>
+        </nav>
       </div>
     </header>
 
-    <main>
+    <main id="main">
       <section class="hero container">
         <span class="eyebrow">KELAS SISTEM INFORMASI — 2025</span>
         <h1>Belajar, Berkarya, Berdampak.</h1>
         <p class="lead">
-          Kami adalah kelas 01SIFE001. Tim yang suka membangun proyek nyata dari AI,
-          berbagi ilmu, dan tumbuh bareng. Ikuti perjalanan kami di kompetisi,
-          riset, dan pengabdian.
+          Kami adalah kelas 01SIFE001. Tim yang suka membangun proyek nyata dari
+          AI, berbagi ilmu, dan tumbuh bareng. Ikuti perjalanan kami di
+          kompetisi, riset, dan pengabdian.
         </p>
         <div class="hero-cta">
           <a class="btn primary" href="#projects">Lihat Proyek</a>
           <a class="btn" href="#contact">Hubungi Kami</a>
         </div>
-        <div class="kpis" aria-label="Ringkasan cepat">
-          <div class="kpi"><strong>32</strong> siswa</div>
-          <div class="kpi"><strong>12</strong> proyek</div>
-          <div class="kpi"><strong>5</strong> penghargaan</div>
-        </div>
+
+        <dl class="kpis" aria-label="Ringkasan cepat">
+          <div class="kpi">
+            <dt class="kpi-term">Siswa</dt>
+            <dd class="kpi-value"><strong>32</strong></dd>
+          </div>
+          <div class="kpi">
+            <dt class="kpi-term">Proyek</dt>
+            <dd class="kpi-value"><strong>12</strong></dd>
+          </div>
+          <div class="kpi">
+            <dt class="kpi-term">Penghargaan</dt>
+            <dd class="kpi-value"><strong>5</strong></dd>
+          </div>
+        </dl>
       </section>
 
       <section id="about">
@@ -366,17 +175,53 @@
           <h2>Proyek Unggulan</h2>
           <div class="grid cols-3">
             <a class="card" href="#" target="_blank" rel="noopener">
-              <img src="project-1.jpg" alt="Thumbnail Proyek 1" />
+              <img
+                src="project-1.jpg"
+                srcset="
+                  project-1_400.jpg 400w,
+                  project-1_640.jpg 640w,
+                  project-1_960.jpg 960w
+                "
+                sizes="(max-width: 700px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                alt="Thumbnail Proyek 1"
+                loading="lazy"
+                width="640"
+                height="400"
+              />
               <strong>ClassHub</strong>
               <p>Portal kegiatan kelas — React + Firebase.</p>
             </a>
             <a class="card" href="#" target="_blank" rel="noopener">
-              <img src="project-2.jpg" alt="Thumbnail Proyek 2" />
+              <img
+                src="project-2.jpg"
+                srcset="
+                  project-2_400.jpg 400w,
+                  project-2_640.jpg 640w,
+                  project-2_960.jpg 960w
+                "
+                sizes="(max-width: 700px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                alt="Thumbnail Proyek 2"
+                loading="lazy"
+                width="640"
+                height="400"
+              />
               <strong>EcoTrack</strong>
               <p>Pelacak sampah kampus — Node + Mongo.</p>
             </a>
             <a class="card" href="#" target="_blank" rel="noopener">
-              <img src="project-3.jpg" alt="Thumbnail Proyek 3" />
+              <img
+                src="project-3.jpg"
+                srcset="
+                  project-3_400.jpg 400w,
+                  project-3_640.jpg 640w,
+                  project-3_960.jpg 960w
+                "
+                sizes="(max-width: 700px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                alt="Thumbnail Proyek 3"
+                loading="lazy"
+                width="640"
+                height="400"
+              />
               <strong>QuizBee</strong>
               <p>Quiz interaktif — Vanilla JS.</p>
             </a>
@@ -387,54 +232,69 @@
       <section id="gallery">
         <div class="container">
           <h2>Galeri</h2>
-          <div class="gallery">
-            <img src="gallery-1.jpg" alt="Kegiatan 1" />
-            <img src="gallery-2.jpg" alt="Kegiatan 2" />
-            <img src="gallery-3.jpg" alt="Kegiatan 3" />
-            <img src="gallery-4.jpg" alt="Kegiatan 4" />
-            <img src="gallery-5.jpg" alt="Kegiatan 5" />
-            <img src="gallery-6.jpg" alt="Kegiatan 6" />
-            <img src="gallery-7.jpg" alt="Kegiatan 7" />
-            <img src="gallery-8.jpg" alt="Kegiatan 8" />
-            <img src="gallery-9.jpg" alt="Kegiatan 9" />
-            <img src="gallery-10.jpg" alt="Kegiatan 10" />
-            <img src="gallery-11.jpg" alt="Kegiatan 11" />
-            <img src="gallery-12.jpg" alt="Kegiatan 12" />
+
+          <div class="carousel" id="galleryCarousel">
+            <div class="carousel-track">
+              <img src="gallery-1.jpg" alt="Kegiatan 1" loading="lazy" />
+              <img src="gallery-2.jpg" alt="Kegiatan 2" loading="lazy" />
+              <img src="gallery-3.jpg" alt="Kegiatan 3" loading="lazy" />
+              <img src="gallery-4.jpg" alt="Kegiatan 4" loading="lazy" />
+              <img src="gallery-5.jpg" alt="Kegiatan 5" loading="lazy" />
+              <img src="gallery-6.jpg" alt="Kegiatan 6" loading="lazy" />
+              <img src="gallery-7.jpg" alt="Kegiatan 7" loading="lazy" />
+              <img src="gallery-8.jpg" alt="Kegiatan 8" loading="lazy" />
+              <img src="gallery-9.jpg" alt="Kegiatan 9" loading="lazy" />
+              <img src="gallery-10.jpg" alt="Kegiatan 10" loading="lazy" />
+              <img src="gallery-11.jpg" alt="Kegiatan 11" loading="lazy" />
+              <img src="gallery-12.jpg" alt="Kegiatan 12" loading="lazy" />
+            </div>
+
+            <div class="carousel-dots" id="galleryDots"></div>
           </div>
         </div>
       </section>
 
       <section id="contact">
-        <div class="container grid cols-2">
-          <div>
-            <h2>Kontak & Sosial</h2>
-            <p>
-              Ingin kolaborasi, undang kami, atau sekadar sapa? Yuk terhubung.
-            </p>
-            <p>
-              Email:
-              <a href="mailto:kelasx2025@example.com">kelasx2025@example.com</a>
-            </p>
-            <p>
-              Instagram:
-              <a
-                href="https://instagram.com/kelasx2025"
-                target="_blank"
-                rel="noopener"
-                >@kelasx2025</a
-              >
-            </p>
-            <p>
-              GitHub:
-              <a
-                href="https://github.com/kelasx2025"
-                target="_blank"
-                rel="noopener"
-                >github.com/kelasx2025</a
-              >
-            </p>
+        <div class="container">
+          <h2>Kontak & Sosial</h2>
+          <p>
+            Ingin kolaborasi, undang kami, atau sekadar sapa? Yuk terhubung.
+          </p>
+
+          <div class="social-links">
+            <a
+              href="mailto:01sife001@gmail.com"
+              class="social-btn"
+              title="Email kami"
+              aria-label="Email"
+            >
+              <img src="./icons/email.svg" alt="Email" />
+            </a>
+
+            <a
+              href="https://www.instagram.com/classofsife_1/"
+              target="_blank"
+              rel="noopener"
+              class="social-btn"
+              title="Instagram"
+              aria-label="Instagram"
+            >
+              <img src="./icons/instagram.svg" alt="Instagram" />
+            </a>
+
+            <a
+              href="https://github.com/"
+              target="_blank"
+              rel="noopener"
+              class="social-btn"
+              title="GitHub"
+              aria-label="GitHub"
+            >
+              <img src="./icons/github.svg" alt="GitHub" />
+            </a>
           </div>
-          <div class="card">
+
+          <div class="card media-kit">
             <strong>Media Kit</strong>
             <p>Unduh logo, warna, dan panduan pemakaian.</p>
             <a class="btn" href="#">Download ZIP</a>
@@ -445,37 +305,120 @@
 
     <footer>
       <div class="container">
-        © 2025 Kelas 01SIFE001 • Made with ♥ dari GPT xixixi
+        <span id="footerYear"></span> © <strong>Kelas 01SIFE001</strong> •
+        <span>Pamulang University</span> •
+        <span>Made with ♥ oleh GPT</span>
       </div>
     </footer>
 
     <script>
-      // Dark mode toggle (swap theme via data attribute for extensibility)
-      const toggle = document.getElementById("themeToggle");
+      // --- Theme ---
+      const themeToggle = document.getElementById("themeToggle");
       const root = document.documentElement;
-      function setTheme(mode) {
-        // Example: you could implement alternate tokens here
+      function applyTheme(mode) {
+        root.setAttribute("data-theme", mode);
         localStorage.setItem("brand-theme", mode);
+        const isDark = mode === "dark";
+        themeToggle.classList.toggle("active", isDark);
+        themeToggle.setAttribute("aria-checked", String(isDark));
       }
-      function init() {
+      function detectInitialTheme() {
         const saved = localStorage.getItem("brand-theme");
-        if (saved === "dark") {
-          toggle.classList.add("active");
-        }
+        if (saved) return saved;
+        return matchMedia("(prefers-color-scheme: light)").matches
+          ? "light"
+          : "dark";
       }
-      toggle.addEventListener("click", () => {
-        toggle.classList.toggle("active");
-        const active = toggle.classList.contains("active");
-        setTheme(active ? "dark" : "light");
-        toggle.setAttribute("aria-checked", active ? "true" : "false");
+      applyTheme(detectInitialTheme());
+      themeToggle.addEventListener("click", () => {
+        applyTheme(
+          (root.getAttribute("data-theme") || "dark") === "dark"
+            ? "light"
+            : "dark"
+        );
       });
-      toggle.addEventListener("keydown", (e) => {
+      themeToggle.addEventListener("keydown", (e) => {
         if (e.key === "Enter" || e.key === " ") {
           e.preventDefault();
-          toggle.click();
+          themeToggle.click();
         }
       });
-      init();
+
+      // --- Mobile menu ---
+      const menuToggle = document.getElementById("menuToggle");
+      const mainNav = document.getElementById("mainNav");
+      function setMenu(open) {
+        mainNav.classList.toggle("open", open);
+        menuToggle.setAttribute("aria-expanded", String(open));
+        document.body.classList.toggle("no-scroll", open);
+      }
+      menuToggle.addEventListener("click", () => {
+        setMenu(!mainNav.classList.contains("open"));
+      });
+      // Close on link click (mobile)
+      mainNav
+        .querySelectorAll("a")
+        .forEach((a) => a.addEventListener("click", () => setMenu(false)));
+      // Close on escape
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") setMenu(false);
+      });
+
+      // === Gallery Carousel ===
+      const track = document
+        .getElementById("galleryCarousel")
+        .querySelector(".carousel-track");
+      const dotsContainer = document.getElementById("galleryDots");
+      const images = track.querySelectorAll("img");
+
+      // Buat dots sesuai jumlah gambar
+      images.forEach((_, i) => {
+        const dot = document.createElement("button");
+        if (i === 0) dot.classList.add("active");
+        dotsContainer.appendChild(dot);
+        dot.addEventListener("click", () => {
+          track.scrollTo({
+            left: track.clientWidth * i,
+            behavior: "smooth",
+          });
+        });
+      });
+
+      const dots = dotsContainer.querySelectorAll("button");
+
+      // Update dot aktif saat scroll
+      track.addEventListener("scroll", () => {
+        const index = Math.round(track.scrollLeft / track.clientWidth);
+        dots.forEach((d, i) => d.classList.toggle("active", i === index));
+      });
+
+      // Swipe support (optional)
+      let startX = 0;
+      track.addEventListener(
+        "touchstart",
+        (e) => (startX = e.touches[0].clientX)
+      );
+      track.addEventListener("touchend", (e) => {
+        const delta = e.changedTouches[0].clientX - startX;
+        const index = Math.round(track.scrollLeft / track.clientWidth);
+        if (delta < -50 && index < images.length - 1) {
+          track.scrollTo({
+            left: track.clientWidth * (index + 1),
+            behavior: "smooth",
+          });
+        } else if (delta > 50 && index > 0) {
+          track.scrollTo({
+            left: track.clientWidth * (index - 1),
+            behavior: "smooth",
+          });
+        }
+      });
+
+      
+      // --- Footer Dynamic Year ---
+      const yearEl = document.getElementById("footerYear");
+      const currentYear = new Date().getFullYear();
+      yearEl.textContent = currentYear;
     </script>
   </body>
 </html>

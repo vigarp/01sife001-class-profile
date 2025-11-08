@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+  <path d="M4 4h16v16H4z" stroke="none"></path>
+  <path d="M4 4h16v16H4z"></path>
+  <polyline points="4,4 12,13 20,4"></polyline>
+</svg>
